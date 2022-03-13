@@ -1,0 +1,1 @@
+/home/rbn/.bashrc
