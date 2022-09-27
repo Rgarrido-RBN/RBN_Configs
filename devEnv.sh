@@ -18,12 +18,14 @@ sudo apt install -y terminator \
     python3-pip \
     
 sudo apt-get update
-sudo apt-get install the-silver-searcher -y
+sudo apt-get install silversearcher-ag -y
 
 # for batcat binary
+if [ ! -d ~/.local/bin ]
+then
 mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/.local/bin/bat
-
+fi
 # Permissions for Docker | Launch Docker without sudo
 sudo groupadd docker
 sudo usermod -aG docker ${USER}
@@ -34,26 +36,26 @@ sudo apt install git -y
 sudo apt install gitk -y
 sudo apt install kdiff3 -y
 
-git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.ci commit
-git config --global alias.st status
-git config --global alias.lg log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-git config --global alias.vi lg --all
-
 echo ">>>>>>>>>>>>>>>>>>> INSTALL VIM"
 sudo apt install vim -y
 sudo apt install neovim -y
 sudo apt install clang-12 --install-suggests
 sudo apt-get install fuse libfuse2 git python3-pip ack-grep -y
 sudo apt install curl -y
+
+if [ ! -z ~/.local/share/nvim/site/autoload/plug.vim ] 
+then
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
 pip3 install --user neovim
 sudo apt-get install flex bison -y
-curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
-sudo bash nodesource_setup.sh
 
-mkdir -p $HOME/.CECOcfg && cd $HOME/.CECOcfg
+if [ ! -f ~/nodesource_setup.sh ] 
+then
+curl -sL https://deb.nodesource.com/setup_16.x -o ~/nodesource_setup.sh
+fi
+sudo bash nodesource_setup.sh
 
 if [ -d $HOME/.config/nvim ];
 then

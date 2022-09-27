@@ -6,6 +6,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-loc
 Plug 'scrooloose/nerdtree'
 Plug 'pacha/vem-tabline'
 Plug 'vim-airline/vim-airline'
+Plug 'rhysd/vim-clang-format'
 Plug 'vim-scripts/vim-gtest'
 Plug 'voldikss/vim-floaterm'
 Plug 'camspiers/lens.vim'
@@ -19,11 +20,21 @@ set termguicolors     " enable true colors support
 "let ayucolor="light"  " for light version of theme
 "let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
-colorscheme monokai
-"colorscheme gruvbox
+"colorscheme monokai
+colorscheme gruvbox
 nnoremap <silent> <C-h> :Files<CR>
 nmap <C-l> :Buffer<CR>
 let g:gtest#gtest_command = "/home/rbn/Projects/superconga/CecoLibiotAWS/binUtils/test_linking_library"
+
+"let g:clang_format#code_style = "file"
+
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+" if you install vim-operator-user
+autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
+" Toggle auto formatting:
+nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 let g:floaterm_keymap_toggle = '<C-t>'
 let g:floaterm_keymap_kill = '<F12>'
@@ -197,3 +208,4 @@ let g:floraterm_width = 1.0
 let g:floraterm_height = 0.4
 nmap <c-t> :FloatermNew fff<cr>
 nmap <c-o> :CocCommand clangd.switchSourceHeader<cr>
+ 
