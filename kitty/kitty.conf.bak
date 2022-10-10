@@ -1,0 +1,6 @@
+# BEGIN_KITTY_THEME
+# Afterglow
+include current-theme.conf
+background_opacity 0.98
+dynamic_background_opacity yes
+# END_KITTY_THEME

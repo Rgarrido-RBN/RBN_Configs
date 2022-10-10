@@ -120,14 +120,12 @@ antigen apply
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias getIDF='. $HOME/Projects/superuniversaldummy/ceco-esp-idf/export.sh'
-alias getRIDF='. $HOME/Projects/rbn-esp-idf/export.sh'
 alias gk='gitk --all&'
-alias ec='eclipse > /dev/null 2>&1 &'
 alias editzshrc='nvim $HOME/.zshrc' 
 alias loadzshrc='source $HOME/.zshrc'
 alias nt='nautilus . > /dev/null 2>&1 &'
 alias editVim='nvim $HOME/.RBNCfg/nvim/init.vim'
 alias vim='nvim'
-alias cat='bat'
 alias size='du -shc'
 alias rg='ranger'
+

@@ -20,8 +20,12 @@ set termguicolors     " enable true colors support
 "let ayucolor="light"  " for light version of theme
 "let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
-"colorscheme monokai
-colorscheme gruvbox
+colorscheme monokai
+"colorscheme gruvbox
+"
+"TRANSPARENCY ON TERMINAL
+hi Normal guibg=NONE ctermbg=NONE
+
 nnoremap <silent> <C-h> :Files<CR>
 nmap <C-l> :Buffer<CR>
 let g:gtest#gtest_command = "/home/rbn/Projects/superconga/CecoLibiotAWS/binUtils/test_linking_library"
@@ -172,6 +176,7 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
   vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
   vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
+map <C-c> "+y
 " Use CTRL-S for selections ranges.
 " Requires 'textDocument/selectionRange' support of language server.
 nmap <silent> <C-s> <Plug>(coc-range-select)

@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/rbn/Projects/CecoMatrix/docker_building_scripts'
+let g:netrw_dirhist_8='/home/rbn/Projects/CecoLibiotAWS'
+let g:netrw_dirhist_7='/home/rbn/Projects/CecoMatrix/configs'
+let g:netrw_dirhist_6='/home/rbn/.RBNCfg'
 let g:netrw_dirhist_5='/home/rbn/Projects/CecoLibiotAWS/src/provissioning'
 let g:netrw_dirhist_4='/home/rbn/Projects/CecoLibiotAWS/include/provissioning'
 let g:netrw_dirhist_3='/home/rbn/Projects/CecoLibiotAWS/include'
