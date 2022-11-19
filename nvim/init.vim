@@ -20,8 +20,8 @@ set termguicolors     " enable true colors support
 "let ayucolor="light"  " for light version of theme
 "let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
-colorscheme monokai
-"colorscheme gruvbox
+"colorscheme monokai
+colorscheme gruvbox
 "
 "TRANSPARENCY ON TERMINAL
 hi Normal guibg=NONE ctermbg=NONE
@@ -29,8 +29,6 @@ hi Normal guibg=NONE ctermbg=NONE
 nnoremap <silent> <C-h> :Files<CR>
 nmap <C-l> :Buffer<CR>
 let g:gtest#gtest_command = "/home/rbn/Projects/superconga/CecoLibiotAWS/binUtils/test_linking_library"
-
-"let g:clang_format#code_style = "file"
 
 " map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
