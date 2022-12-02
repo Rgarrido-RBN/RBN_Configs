@@ -6,7 +6,7 @@ CURRENT_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [ $1 == "clean"]
 then
-    rm -rf ~/.config/kittyBCKP ~/.config/nvimBCKP ~/.gitconfigBCKP 
+    rm -rf ~/.config/kittyBCKP ~/.config/nvimBCKP ~/.gitconfigBCKP ~/.zshrcBCKP
     exit 1
 fi
 
@@ -34,6 +34,15 @@ then
 fi
 
 ln -s ${CURRENT_PATH}/gitconfig ~/.gitconfig 
+
+### ZSHRC
+
+if [ -f ~/.zshrc ]
+then
+    mv ~/.zshrc ~/.zshrcBCKP
+fi
+
+ln -s ${CURRENT_PATH}/zshrc ~/.zshrc 
 
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 echo "@@@@@@@  INSTALLATION COMPLETED  @@@@@@"

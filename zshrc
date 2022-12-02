@@ -118,6 +118,7 @@ antigen apply
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source $HOME/.config/RBNCfg/files.sh
 
 alias getIDF='. $HOME/Projects/superuniversaldummy/ceco-esp-idf/export.sh'
 alias gk='gitk --all&'

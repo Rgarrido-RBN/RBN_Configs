@@ -7,6 +7,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'pacha/vem-tabline'
 Plug 'vim-airline/vim-airline'
 Plug 'rhysd/vim-clang-format'
+Plug 'humanoid-colors/vim-humanoid-colorscheme'
 Plug 'vim-scripts/vim-gtest'
 Plug 'voldikss/vim-floaterm'
 Plug 'camspiers/lens.vim'
@@ -22,6 +23,7 @@ set termguicolors     " enable true colors support
 "let ayucolor="dark"   " for dark version of theme
 "colorscheme monokai
 colorscheme gruvbox
+"colorscheme humanoid
 "
 "TRANSPARENCY ON TERMINAL
 hi Normal guibg=NONE ctermbg=NONE
